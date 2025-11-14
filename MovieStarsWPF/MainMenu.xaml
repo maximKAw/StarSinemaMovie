@@ -1,0 +1,29 @@
+﻿<Window x:Class="MovieStarsWPF.MainMenu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MovieStarsWPF"
+        mc:Ignorable="d"
+        ResizeMode="CanMinimize"
+        WindowState="Normal"
+        WindowStyle="SingleBorderWindow"
+        WindowStartupLocation="CenterScreen" 
+        Title="Главное меню программы" 
+        Height="400" Width="430" Loaded="Window_Loaded" KeyDown="Window_KeyDown">    
+    <Grid Margin="0,0,0,326">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="283*"/>
+            <ColumnDefinition Width="192*"/>
+            <ColumnDefinition Width="99*"/>
+            <ColumnDefinition Width="107*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Margin="0,0,57,0" Grid.ColumnSpan="4">
+            <Menu Height="50" Margin="0,0,-57,0">
+                <MenuItem x:Name="MenuArtist" Header="Артисты" Click="Artist_Click"/>
+                <MenuItem x:Name="Exit" Header="Выход" Click="MenuItemExit_Click"/>
+            </Menu>
+        </StackPanel>
+        <Image x:Name="image_1" Height="Auto" Margin="30,70,30,-320" Source="/Заставка.jpg" Stretch="Fill" Grid.ColumnSpan="4"/>
+    </Grid>
+</Window>

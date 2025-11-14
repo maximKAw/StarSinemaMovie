@@ -1,0 +1,28 @@
+﻿<Window x:Class="MovieStarsWPF.ProsmotrFoto"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MovieStarsWPF"
+        mc:Ignorable="d"
+        ResizeMode="CanMinimize"
+        WindowState="Normal"
+        WindowStyle="SingleBorderWindow"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        WindowStartupLocation="CenterScreen" FontSize="16"
+        Title="Просмотр фото" Height="420" Width="350" KeyDown="Window_KeyDown" Loaded="Window_Loaded">
+    <Grid Background= "LightPink" Margin="0,-16,0,-12">
+        <Border MinWidth="280" Margin="10,0,10,0" Background="Beige" VerticalAlignment="Center" Padding="40" MaxHeight="380" MaxWidth="350" CornerRadius="20" Height="357">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="10" Color="LightGray" ShadowDepth="0"></DropShadowEffect>
+            </Border.Effect>
+            <StackPanel Margin="-20,-30,-20,-38">
+                <Label x:Name="LabelChangeFoto" Content="Изменить" HorizontalAlignment="Left" Margin="30 0 0 10" FontFamily="Times New Roman" Foreground="Blue" FontSize="20" FontWeight="Bold" Width="100" Grid.Column="1" MouseDown="ChangeFoto" />
+                <Label x:Name="LabelDeleteFoto" Content="Удалить" HorizontalAlignment="Left" Margin="170 -40 0 10" FontFamily="Times New Roman" Foreground="Red" FontSize="20" FontWeight="Bold" Width="100" Grid.Column="1" MouseDown="DeleteFoto" />
+                <Image x:Name="ImageFoto" Height="253" Margin="0 0 0 10" Source="/ПустоеФото.jpg" Stretch="Fill" Grid.Column="1" MouseDown="ChangeFoto" Width="298"/>
+                <Label x:Name="LabelExit" Content="Выход" HorizontalAlignment="Left" Margin="120 5 0 0" FontFamily="Times New Roman" Foreground="Black" FontSize="20" FontWeight="Bold" Width="67" Grid.Column="1" MouseDown="ExitClick" Height="29" KeyDown="LabelExit_KeyDown" />
+            </StackPanel>
+        </Border>
+
+    </Grid>
+</Window>
